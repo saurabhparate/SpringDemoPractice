@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <bean id="traingle" class="com.saurabh.Triangle" >
+		<property name="pointA">
+			<bean id="point0" class="com.saurabh.Point">
+				<property name="x" value="0"/>
+				<property name="y" value="0"/>
+			</bean>
+		</property>
+		<property name="pointB" ref="point1"></property>
+		<property name="pointC" ref="point2"></property>
+	</bean> -->
+	<bean id="circle" class="com.saurabh.Circle" init-method="displayInit" destroy-method="displayDestroy">
+		
+	</bean>
+	
+	
+	 <bean id="center1" class="com.saurabh.Point">
+		<property name="x" value="0"/>
+		<property name="y" value="20"/>
+	</bean>
+	<bean id="point3" class="com.saurabh.Point">
+		<property name="x" value="0"/>
+		<property name="y" value="-20"/>
+	</bean> 
+	<context:annotation-config/>
+	<context:component-scan base-package="com.saurabh"/>	
+</beans>
